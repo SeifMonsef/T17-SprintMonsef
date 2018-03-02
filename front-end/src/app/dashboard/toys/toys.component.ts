@@ -3,7 +3,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { ToysService } from './toys.service'
 @Component({
   selector: 'app-toys',
-  template: '<ng2-smart-table [settings]="settings" [source]="data" (createConfirm)="onCreateCall($event)" (editConfirm)="onEditCall($event)" (deleteConfirm)=onDeleteCall($event) ></ng2-smart-table>',
+  template: '<ng2-smart-table [settings]="settings" [source]="data" (createConfirm)="onCreateCall($event)" (editConfirm)="onEditCall($event)" (deleteConfirm)=onDeleteCall($event) (addConfirm)="onaddCall($event)" ></ng2-smart-table>',
   providers: [ToysService]
 })
 // <ng2-smart-table [settings]="settings"></ng2-smart-table>
@@ -17,6 +17,9 @@ export class ToysComponent implements OnInit {
     },
     delete:{
       confirmDelete: true,
+    },
+    addtocart:{
+      confirmCart: true,
     },
     columns: {
       name: {
@@ -59,8 +62,20 @@ export class ToysComponent implements OnInit {
     event.confirm.resolve(event.data._id);
     this.toysService.deleteProduct(event.data._id).subscribe();
   }
+
+ 
+
+
   ngOnInit() {
     this.toysService.getProducts().subscribe((res:any) => {console.log(res.data);this.data = res.data;});
    }
+
+
+
+
+
+
+
+   
 
 }

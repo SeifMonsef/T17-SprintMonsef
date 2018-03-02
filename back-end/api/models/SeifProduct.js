@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var youssefproductSchema = mongoose.Schema({
+var SeifproductSchema = mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -30,4 +30,4 @@ var youssefproductSchema = mongoose.Schema({
   }
 });
 
-mongoose.model('YoussefProduct', youssefproductSchema);
+mongoose.model('SeifProduct', SeifproductSchema);

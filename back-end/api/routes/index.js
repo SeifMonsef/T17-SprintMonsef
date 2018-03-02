@@ -1,7 +1,7 @@
 var express = require('express'),
   router = express.Router(),
 //  productCtrl = require('../controllers/ProductController');
-  youssefproductCtrl = require('../controllers/YoussefProductController');
+  SeifproductCtrl = require('../controllers/SeifController');
 
   const authentication = require('../controllers/authentication')(router);
   app = express();
@@ -21,13 +21,13 @@ var express = require('express'),
 
 
 app.use('/authentication' , authentication);
-//------------------------------Youssef Product----------------------------------
-router.get('/youssefproduct/getProducts', youssefproductCtrl.getProducts);
-router.get('/youssefproduct/getProduct/:productId', youssefproductCtrl.getProduct);
-router.get('/youssefproduct/getProductsBelowPrice/:price', youssefproductCtrl.getProductsBelowPrice);
-router.post('/youssefproduct/createProduct', youssefproductCtrl.createProduct);
-router.patch('/youssefproduct/updateProduct/:productId', youssefproductCtrl.updateProduct);
-router.delete('/youssefproduct/deleteProduct/:productId', youssefproductCtrl.deleteProduct);
+//------------------------------Seif Product----------------------------------
+router.get('/Seifproduct/getProducts', SeifproductCtrl.getProducts);
+router.get('/Seifproduct/getProduct/:productId', SeifproductCtrl.getProduct);
+router.get('/Seifproduct/getProductsBelowPrice/:price', SeifproductCtrl.getProductsBelowPrice);
+router.post('/Seifproduct/createProduct', SeifproductCtrl.createProduct);
+router.patch('/Seifproduct/updateProduct/:productId', SeifproductCtrl.updateProduct);
+router.delete('/Seifproduct/deleteProduct/:productId', SeifproductCtrl.deleteProduct);
 
 
 //-------------------------------Member Routes-----------------------------------

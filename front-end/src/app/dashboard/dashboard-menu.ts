@@ -25,5 +25,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       icon: 'fa fa-user-plus',
       link: '/dashboard/authe/signup',
     }]
+  },
+  {
+    title: 'Cart',
+    icon: 'fa fa-cart-arrow-down',
+    
   }
 ];
