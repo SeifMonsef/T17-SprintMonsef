@@ -7,19 +7,19 @@ export class ToysService {
 
   constructor(private httpClient: HttpClient) { }
 
-  createProduct(name:string, price:number) {
-    return this.httpClient.post(environment.apiUrl + 'product/createProduct', {'name':name, 'price':price});
+  createProduct(name:string, price:number, seller:string) {
+    return this.httpClient.post(environment.apiUrl + 'youssefproduct/createProduct', {'name':name, 'price':price, 'seller':seller});
   }
 
   getProducts(){
-    return this.httpClient.get(environment.apiUrl + 'product/getProducts');
+    return this.httpClient.get(environment.apiUrl + 'youssefproduct/getProducts');
   }
 
-  updateProduct(id:object, name:string, price:number) {
-    return this.httpClient.patch(environment.apiUrl + 'product/updateProduct/'+id,{'name':name, 'price':price});
+  updateProduct(id:object, name:string, price:number, seller:string) {
+    return this.httpClient.patch(environment.apiUrl + 'youssefproduct/updateProduct/'+id,{'name':name, 'price':price, 'seller':seller });
   }
 
   deleteProduct(id:object){
-    return this.httpClient.delete(environment.apiUrl+ 'product/deleteProduct/'+id);
+    return this.httpClient.delete(environment.apiUrl+ 'youssefproduct/deleteProduct/'+id);
   }
 }

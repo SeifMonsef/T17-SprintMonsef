@@ -51,9 +51,8 @@ const routes: Routes = [
     path: 'store',
     loadChildren: './dashboard/toys/toys.module#ToysModule'
   },
-  {
-    path:'items' ,
-	  loadChildren :'./dashboard/items/items.module#ItemsModule'},
+    // path:'items' ,
+	  // loadChildren :'./dashboard/items/items.module#ItemsModule'},
 
   {
     path: '', redirectTo: 'dashboard', pathMatch: 'full'
